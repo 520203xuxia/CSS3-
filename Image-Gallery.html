@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			background-image: url(img/bg.jpg);
+			background-size: 100% ,100%;
+			background-repeat: no-repeat;
+		}
+		#main{
+			width: 800px;
+			height: 500px;
+		}
+		#img1{
+			float: left;
+			width: 200px;
+			animation: keyimg1 4s;
+			animation-direction: alternate;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease;
+		}
+		#img2{
+			width: 350px;
+			animation: keyimg2 3s;
+			animation-fill-mode: forwards;
+		}
+		#img3
+		{
+			float: right;
+		 	width: 300px;
+		 	animation: keyimg3 6s;
+		 	animation-fill-mode: forwards;
+		}
+		
+		@keyframes keyimg1{
+			from{transform: rotate(0deg);width: 0;position: absolute; left: -10px; top: 0px;z-index: 2}
+			to{transform: rotate(-30deg);width: 200px; position: absolute;left: 400px;top: 250px;z-index: 2}
+		}
+		@keyframes keyimg2{
+			from{transform: rotateX(0deg) scale(0) rotate(0deg); width: 0;top: -10px; left: 0px; position: absolute;z-index: 1;}
+			to{transform: rotateX(360deg) scale(1.5) rotate(30deg);width: 200px;top:200px; left:300px; position: absolute;z-index: 1}
+		}
+		@keyframes keyimg3{
+			from{transform: rotate(0deg) rotateY(0deg);width: 0;position: absolute; left: 800px; top: 0px;z-index: 3}
+			to{transform: rotate(40deg) rotateY(300deg);width: 350px; position: absolute;left: 500px;top: 250px;z-index: 3}
+		}
+
+	</style>
+</head>
+<body>
+<div id="main">
+	<img src="img/1.jpg" id="img1">
+	<img src="img/2.jpg" id="img2">
+	<img src="img/3.jpg" id="img3">
+</div>
+</body>
+</html>
