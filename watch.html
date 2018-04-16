@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#main{
+			background-image:url('img/clockface.jpg');		
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			width: 800px;
+			height: 800px;
+		}
+		#hour,#min,#sec{
+			position: absolute;
+			left:290px;
+		}
+		@keyframes keyhour{
+			from {transform: rotate(300deg);}
+			to{transform: rotate(360deg);}		
+		}
+		@keyframes keymin{
+			from {transform: rotate(10deg);}
+			to{transform: rotate(360deg);}		
+		}
+		@keyframes keysec{
+			from {transform: rotate(0deg);}
+			to{transform: rotate(360deg);}		
+			
+		}
+		#hour{
+			animation: keyhour 43200s;
+			animation-iteration-count:infinite; 
+			animation-timing-function: linear;
+		}
+		#min{
+			animation: keymin 3600s;
+			animation-iteration-count:infinite; 
+			animation-timing-function: linear;
+		}
+		#sec{
+			animation: keysec 60s;
+			animation-iteration-count:infinite; 
+			animation-timing-function: linear;
+		}
+	</style>
+</head>
+<body>
+<div id="main">
+	<img src="img/hourhand.png" id="hour" />
+	<img src="img/minhand.png" id="min" />
+	<img src="img/sechand.png" id="sec"/ >
+
+</div>
+</body>
+</html>
